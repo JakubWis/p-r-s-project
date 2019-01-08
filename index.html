@@ -9,17 +9,40 @@
 </head>
 
 <body>
-
-	<button id="restart">New game</button>
-	<button id="paper">Paper</button>
-	<button id="rock">Rock</button>
-	<button id="scissors">Scissors</button>
-
-	<div id="output"> </div>
-	<div id="result"> </div>
-	<div id="goal"> </div>
-
-
+	<button id="restart" style="background-color: #23fc3c; color: #215928; border: none;" >New game</button>
+	<button id="paper" data-move="paper" class="player-move">Paper</button>
+	<button id="rock" data-move="rock" class="player-move">Rock</button>
+	<button id="scissors" data-move="scissors" class="player-move">Scissors</button>
+	
+	<div id="output" class="output"> </div>
+	<div class="board">
+		<div id="result" class="result"> </div>
+	</div>
+	<div id="goal" class="goal"> </div>
+		<div class="modal" id="modal-won">
+			<a href="#" class="close">x</a>
+			<header style="color:#2eb519">CONGRATULATION you WON the battle!</header>
+			<div class="table" id="tbl-won"></div>
+		</div>
+		<div class="modal" id="modal-lost">
+			<a href="#" class="close">x</a>
+			<header style="color:#c11919">You lost the battle. Try again!</header>
+			<div class="table" id="tbl-lost"></div>
+		</div>
+		<div class="modal" id="modal-newgame">
+			<a href="#" class="close">x</a>
+				<div class="data-lane">
+					<label for="name" class="lName">Name:</label>
+					<input id="playerName" type="text" name="name" placeholder="Jhony" class="iName">
+				</div>
+				<div class="data-lane">
+					<label for="rounds" class="lNumber">Number of rounds: </label>
+					<input id="numberOfRounds" type="number" name="rounds" placeholder="5" class="iNumber" min="0">
+				</div>
+				<button id="btn-start">Let's get it started</button>		
+		</div>
+	<div class="overlay" id="modal-overlay">
+	</div>
 
 	<script src="js/script.js"></script>
 
