@@ -115,22 +115,27 @@ function write(what, btn, computerMove){
 }
 
 function restartGame(){
-  hideModal()
-  params.progress = [] // deletes history of moves
-  params.rounds = parseInt(document.getElementById('numberOfRounds').value)
-  playerName = document.getElementById('playerName').value
-  if(onlyNumbers(params.rounds)){
-    start = true
-    params.pp = 0
-    params.cp = 0
-    result.innerHTML = playerName + " " + params.pp + " " + params.cp +"  Computer"
-    output.innerHTML = ""
-    goal.innerHTML="To win the game score " + params.rounds + " points."
-  }
+  if(isNaN(parseInt(document.getElementById('numberOfRounds').value)) ||
+    document.getElementById('playerName').value == ''
+    )
+    alert('Fill in each field!');
   else{
-    alert("You used wrong charackters. Try again.")
+    hideModal()
+    params.progress = [] // deletes history of moves
+    params.rounds = parseInt(document.getElementById('numberOfRounds').value)
+    playerName = document.getElementById('playerName').value
+    if(onlyNumbers(params.rounds)){
+      start = true
+      params.pp = 0
+      params.cp = 0
+      result.innerHTML = playerName + " " + params.pp + " " + params.cp +"  Computer"
+      output.innerHTML = ""
+      goal.innerHTML="To win the game score " + params.rounds + " points."
+    }
+    else{
+      alert("You used wrong charackters. Try again.")
+    }
   }
-  
 }
 
   function onlyNumbers(str) {

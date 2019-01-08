@@ -1,114 +1,45 @@
-body {
-  margin: 0;
-  text-align: center;
-  font-size: 25px;
-  background-color: #353138; }
+body { margin: 0; text-align: center; font-size: 25px; background-color: #353138; }
 
-button {
-  margin: 20px 20px;
-  padding: 20px 30px;
-  background-color: #1e344f;
-  border-color: #aa5a5a;
-  border-radius: 10px;
-  color: #fff;
-  cursor: pointer;
-  transition: all 0.6s ease; }
-  button:hover {
-    padding: 30px 40px;
-    background-color: #1265cc;
-    border-color: #fff; }
+button { margin: 20px 20px; padding: 20px 30px; background-color: #1e344f; border-color: #aa5a5a; border-radius: 10px; color: #fff; cursor: pointer; transition: all 0.6s ease; }
 
-.board {
-  background-image: linear-gradient(to right, #0937c1, #0937c1 50%, #7f0f23 50%);
-  padding: 30px 0;
-  margin: 10px 0;
-  color: #fff; }
-  .board .result {
-    position: relative;
-    left: 15px;
-    word-spacing: 60px;
-    font-size: 30px;
-    font-weight: 700; }
+button:hover { padding: 30px 40px; background-color: #1265cc; border-color: #fff; }
 
-.output {
-  margin-top: 50px;
-  color: #fff; }
+.board { background-image: linear-gradient(to right, #0937c1, #0937c1 50%, #7f0f23 50%); padding: 30px 0; margin: 10px 0; color: #fff; }
 
-.goal {
-  color: #fff; }
+.board .result { position: relative; left: 15px; word-spacing: 60px; font-size: 30px; font-weight: 700; }
 
-.overlay {
-  display: none;
-  position: absolute;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.7);
-  cursor: pointer; }
-  .overlay.show {
-    display: block; }
+.output { margin-top: 50px; color: #fff; }
 
-.modal {
-  display: none;
-  background: #fff;
-  width: 550px;
-  position: relative;
-  top: 50%;
-  left: 50%;
-  transform: translate3d(-50%, -50%, 0);
-  text-align: center;
-  position: absolute;
-  z-index: 20;
-  font-size: 16px; }
-  .modal.show {
-    display: block; }
-  .modal .close {
-    position: absolute;
-    right: 0;
-    top: 0;
-    padding: 5px;
-    color: #000;
-    text-decoration: none; }
-  .modal header {
-    font-size: 20px;
-    line-height: 30px;
-    min-height: 30px;
-    font-weight: bold;
-    padding: 60px 30px 10px 30px; }
-  .modal table {
-    margin: 10px auto; }
-    .modal table td {
-      padding: 8px;
-      text-align: center; }
-  .modal .data-lane {
-    padding: 40px 20px 0 20px; }
-    .modal .data-lane .lName {
-      position: absolute;
-      left: 20px; }
-    .modal .data-lane .lNumber {
-      position: absolute;
-      left: 20px; }
-    .modal .data-lane .iName {
-      position: relative;
-      right: 10px;
-      bottom: 5px;
-      width: 250px; }
-    .modal .data-lane .iNumber {
-      position: relative;
-      right: 30px;
-      bottom: 5px;
-      width: 50px; }
-    .modal .data-lane input {
-      padding: 8px;
-      border-radius: 5px; }
-  .modal button {
-    padding: 10px;
-    margin: 20px;
-    background-color: #23fc3c;
-    color: #215928;
-    border: none;
-    border-radius: 10px;
-    transition: all 0.6s ease; }
-    .modal button:hover {
-      color: #fff;
-      padding: 20px; }
+.goal { color: #fff; }
+
+.overlay { display: none; position: absolute; top: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.7); cursor: pointer; }
+
+.overlay.show { display: block; }
+
+.modal { display: none; background: #fff; width: 550px; position: relative; top: 50%; left: 50%; transform: translate3d(-50%, -50%, 0); text-align: center; position: absolute; z-index: 20; font-size: 16px; }
+
+.modal.show { display: block; }
+
+.modal .close { position: absolute; right: 0; top: 0; padding: 5px; color: #000; text-decoration: none; }
+
+.modal header { font-size: 20px; line-height: 30px; min-height: 30px; font-weight: bold; padding: 60px 30px 10px 30px; }
+
+.modal table { margin: 10px auto; }
+
+.modal table td { padding: 8px; text-align: center; }
+
+.modal .data-lane { padding: 40px 20px 0 20px; }
+
+.modal .data-lane .lName { position: absolute; left: 20px; }
+
+.modal .data-lane .lNumber { position: absolute; left: 20px; }
+
+.modal .data-lane .iName { position: relative; right: 10px; bottom: 5px; width: 250px; }
+
+.modal .data-lane .iNumber { position: relative; right: 30px; bottom: 5px; width: 50px; }
+
+.modal .data-lane input { padding: 8px; border-radius: 5px; }
+
+.modal button { padding: 10px; margin: 20px; background-color: #23fc3c; color: #215928; border: none; border-radius: 10px; transition: all 0.6s ease; }
+
+.modal button:hover { color: #fff; padding: 20px; }
